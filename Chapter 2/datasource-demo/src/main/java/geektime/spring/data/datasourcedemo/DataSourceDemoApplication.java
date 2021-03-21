@@ -13,7 +13,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 // SpringBootApplication注解
 @SpringBootApplication
-@Slf4j
+@Slf4j // slf4j注解
 public class DataSourceDemoApplication implements CommandLineRunner {
 	@Autowired // 自动注入springboot自动配置的dataSource，配置文件中有相关
 	private DataSource dataSource;
