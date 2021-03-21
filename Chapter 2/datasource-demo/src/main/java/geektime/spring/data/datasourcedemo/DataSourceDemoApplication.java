@@ -11,7 +11,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
-
+// SpringBootApplication注解
 @SpringBootApplication
 @Slf4j
 public class DataSourceDemoApplication implements CommandLineRunner {
