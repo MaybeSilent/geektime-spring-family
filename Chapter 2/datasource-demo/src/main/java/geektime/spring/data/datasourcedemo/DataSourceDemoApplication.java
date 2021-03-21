@@ -1,5 +1,6 @@
 package geektime.spring.data.datasourcedemo;
 
+//
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -14,7 +15,7 @@ import java.sql.SQLException;
 @SpringBootApplication
 @Slf4j
 public class DataSourceDemoApplication implements CommandLineRunner {
-	@Autowired
+	@Autowired // 自动注入springboot自动配置的dataSource，配置文件中有相关
 	private DataSource dataSource;
 
 	@Autowired
@@ -38,7 +39,7 @@ public class DataSourceDemoApplication implements CommandLineRunner {
 	}
 
 	private void showData() {
-		jdbcTemplate.queryForList("SELECT * FROM FOO")
+		jdbcTemplate.queryForList("SELECT * FROM FOO") // jdbcTemplate，Spring中最基础的访问数据库实现方式
 				.forEach(row -> log.info(row.toString()));
 	}
 }
